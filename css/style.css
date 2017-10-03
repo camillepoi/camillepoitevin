@@ -1,0 +1,97 @@
+/* === CSS RESET === */
+* { margin: 10;
+	padding: 10;
+}
+
+header {
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	font-variant: normal;
+	color: black;
+	padding: 10px;
+	text-align: center;
+	border-bottom: 10px solid #FFCA8D;
+	background-color: white;
+}
+#homepage{
+	color: #9F6709;
+	background-color: snow;
+	margin: 10%;
+	border: none;
+}
+#rond{
+	width: 5%;
+	background-color: grey;
+}
+a#go{
+	color: blue;
+	background: none;
+	font-size: 20px;
+	margin: 10px;
+}
+
+body { 
+	background-color: white;
+	font-family: "Helvetica Neue", sans-serif;
+}
+#faces_background{
+	background-image: url("../images/faces.gif");
+}
+nav {
+	color: black;
+	margin: 50px;
+	text-decoration: none;
+	text-align: center;
+}
+
+#nav a, a:link, a:visited {
+	color: black;
+	text-decoration: none;
+	text-align: center;
+	padding: 25px 50px 25px;
+	margin: 0px 4px;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	font-size: 13px;
+}
+
+nav a:hover, a:active {
+	background-color: #F0E7A2;
+}
+
+article {
+	background-color: bisque;
+	padding: 30px;
+	margin: 50px; 
+}
+.titlesreadings {
+	font-style: italic;
+}
+a.articlereport {
+	background-color: snow;
+	padding: 10px;
+	margin: 0px;
+}
+a.articlereport:hover {
+	background-image: url("../images/frida.gif");
+	color:  snow;
+}
+a.htmllinks:hover {
+	background-image: url("../images/beyonce2.gif");
+	color:  snow;
+}
+a.htmllinks {
+	background-color: snow;
+	padding: 10px;
+	margin: 0px;
+}
+#descriptioncourse {
+	border: 20px solid bisque;
+	border-color: bisque;
+}
+#container {
+	display: block;
+	column-count: 2;
+}
+footer {
+	background-color: aquamarine;
+}
