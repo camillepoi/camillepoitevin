@@ -1,0 +1,33 @@
+/* CSS Document */
+* {
+	margin: 0;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+#title hgroup {
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	background-color: bisque;
+	text-align: center;
+	width:80%;
+	top:30%;
+	left:50%;
+	position: absolute;
+	transform: translate(-50%,-50%);
+}
+
+#title {
+	background: url(photo.png) no-repeat center center fixed;
+	background-size: cover;
+	padding: 20% 50% 20% 50%;
+	position: relative;
+}
+
+#text p{
+	font-family: "Helvetica Neue", sans-serif;
+	text-align: justify;
+	line-height: 20px;
+	column-count: 4;
+	column-rule: dashed;
+	column-gap: 50px;
+}
