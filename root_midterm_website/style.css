@@ -1,0 +1,92 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	font-family: "Adobe Caslon Pro", "Adobe Caslon Pro Bold", Henriette;
+	font-size: 16px;
+}
+
+#title {
+	font-family:Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
+	letter-spacing: 10px;
+}
+.verticalmenu {
+	width: 100px;
+	padding: 50px 0px;
+	margin-left: 20px;
+	float: left;
+}
+
+.verticalmenu a {
+	background-color: transparent;
+	padding: 2px;
+	color: blue;
+	display: block;
+	text-decoration: none;
+}
+
+.verticalmenu a:hover {
+	color: skyblue;
+}
+
+a.active {
+	color: white;
+}
+
+span {
+	padding: 2px;
+}
+.exposant {
+	position: relative;
+	font-size: .7em;
+	vertical-align:super;
+}
+
+.text {
+	padding: 50px;
+	margin: 0px 70px 0px 170px;
+	text-align: justify;
+	line-height: 2;	
+}
+
+h3 {
+	padding: 50px 0px 10px;
+	margin: 0px 70px 0px 170px;
+	text-align: center;
+	background-clip: content-box;
+}
+
+hr {
+	border-style: dashed;
+	margin: 0px 70px 0px 70px;
+	vertical-align: top;
+}
+
+.images {
+	margin: 0px 70px 0px 170px;
+	display: flex;
+	align-content: center;
+}
+
+.imagesmockup {
+	margin: 0px 70px 0px 170px;
+	display: flex;
+	align-content: center;
+}
+
+.imageiphone {
+	margin-left: 20px;
+}
+
+.textdiagram {
+	margin: 0px 70px 0px 170px;
+	padding: 0px 50px 50px;
+	column-count: 2;
+}
+
+#footer {
+	font-family:Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
+	letter-spacing: 5px;
+	font-size: 12px;
+	position: bottom;
+}
