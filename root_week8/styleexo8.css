@@ -1,0 +1,40 @@
+@charset "UTF-8";
+*{
+	margin: 0;
+}
+/* CSS Document */
+body, html{
+	height: 100%;
+	width: 100%;
+}
+.parent{
+	display: flex;
+	height: 100%;
+	width: 100%;
+}
+.flexbox {
+	font: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
+	letter-spacing: 30px;
+	border: 10px solid black;
+	padding: 10px; 
+	width: 500px;
+	text-align: center;
+	margin: auto;
+	flex: 0;
+}
+
+
+.container{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around; 
+	width: 100%;
+}
+
+img {
+	height: 200px;
+    width: 200px;
+	flex: 1 250px;
+	margin: 10px;
+}
