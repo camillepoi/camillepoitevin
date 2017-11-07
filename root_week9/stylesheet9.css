@@ -1,0 +1,96 @@
+
+/* CSS Document */
+
+/* reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*to make child elements support a height value*/
+html, body {
+	height: 100%;
+}
+
+header {
+	font-size: 100px;
+	display: flex;
+	justify-content: center;
+}
+
+section {
+	font-size: 100px;
+	background-color: yellow;
+	display: flex;
+	flex-flow: row wrap;
+	padding: 2%;
+	margin: 2%;
+	justify-content: space-around;
+	min-height: 40%; height: auto;
+	align-items: flex-end;
+}
+
+div{
+	background-color: white;
+	width: 250px;
+	height: 200px;
+	text-align: center;
+	position: relative; /*pour que children donc div soit absolute par rapport au parent donc section?*/
+	margin-bottom: 20px; /*how to center the text and the div in the section?*/
+	transition: all 0.5s;
+	justify-content: space-around;
+	overflow: hidden;
+
+	
+}
+
+div:hover{
+	background-color: slateblue;
+	color: blue;
+	/*font-size: 140%; why it moves when not over anymore?*/
+	text-align: center;
+	box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+	background: url(images/motif.png) no-repeat center;
+	text-shadow: 10px 10px 0px #333;
+}
+
+div p {
+	font-size: 30px;
+	background: rgba(100,0,0,.5);
+	padding: 20px;
+	position: absolute;
+	transition: all 1s 0.5s;
+	bottom: -100px;
+}
+
+div:hover p{
+	bottom: 0;
+	width: 100%; /*pourquoi s'en va avec taille differente?*/
+	border-radius: 50%; /*?????*/
+}
+
+a{
+	flex: 1;
+	padding:10px;
+}
+
+nav{
+	display: flex;
+	background-color: yellow;
+	text-align: center;
+}
+
+/*bounce to right ??!!*/
+.links:before{
+	top: 0;
+  	left: 0;
+  	right: 0;
+  	bottom: 0;
+	position: absolute;  
+	background: #FFFFFF;
+}
+
+.links:hover {
+	right:200;
+}
