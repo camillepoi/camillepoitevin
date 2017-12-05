@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Fast</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<svg id="barrelaterale" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 653.11">
+		<defs>
+		<style>
+			.cls-1 {
+				fill:#FFFF83;
+				stroke:#000;
+				stroke-miterlimit:10;
+				stroke-width:0px;
+			}
+			.cls-2 {
+				fill:orange;
+				stroke:#000;
+				stroke-miterlimit:10;
+				stroke-width:0px;
+			}
+		</style>
+		</defs>
+		<title>barrelaterale</title>
+		<rect class="cls-1" x="0.25" y="0.25" width="14.5" height="37.61"/>
+		<rect class="cls-1" x="0.25" y="41.21" width="14.5" height="37.61"/>
+		<rect class="cls-1" x="0.25" y="82.18" width="14.5" height="37.61"/>
+		<rect class="cls-1" x="0.25" y="123.14" width="14.5" height="37.61"/>
+		<rect class="cls-1" x="0.25" y="287.25" width="14.5" height="37.61"/>
+		<rect class="cls-1" x="0.25" y="164.21" width="14.5" height="37.61"/>
+		<rect class="cls-1" x="0.25" y="205.18" width="14.5" height="37.61"/>
+		<rect class="cls-1" x="0.25" y="246.14" width="14.5" height="37.61"/>
+		<rect class="cls-1" x="0.25" y="328.25" width="14.5" height="37.61"/>
+		<rect class="cls-1" x="0.25" y="369.21" width="14.5" height="37.61"/>
+		<rect class="cls-1" x="0.25" y="410.18" width="14.5" height="37.61"/>
+		<rect class="cls-2" x="0.25" y="451.14" width="14.5" height="37.61"/>
+		<rect class="cls-2" x="0.25" y="492.21" width="14.5" height="37.61"/>
+		<rect class="cls-2" x="0.25" y="533.18" width="14.5" height="37.61"/>
+		<rect class="cls-2" x="0.25" y="574.14" width="14.5" height="37.61"/>
+		<rect class="cls-2" x="0.25" y="615.25" width="14.5" height="37.61"/>
+</svg>
+
+<div class="stopwatch">
+	<script>
+		class Stopwatch {constructor(display, results) {
+        this.running = false;
+        this.display = display;
+        this.results = results;
+        this.laps = [];
+        this.reset();
+        this.print(this.times);
+		
+    }
+			
+		
+    reset() {
+        this.times = [ 0, 0, 0 ];
+		this.time = performance.now();
+		if (!this.time) this.time = performance.now();
+        if (!this.running) {
+            this.running = true;
+            requestAnimationFrame(this.step.bind(this));
+        }
+		setTimeout ( 'alert(\'LOST!\')', 1000);
+		clearTimeout ( timeoutId );
+    }
+    
+ 
+    step(timestamp) {
+        if (!this.running) return;
+        this.calculate(timestamp);
+        this.time = timestamp;
+        this.print();
+        requestAnimationFrame(this.step.bind(this));
+    }
+    
+    calculate(timestamp) {
+        var diff = timestamp - this.time;
+        // Hundredths of a second are 100 ms
+        this.times[2] += diff / 10;
+        // Seconds are 100 hundredths of a second
+        if (this.times[2] >= 100) {
+            this.times[1] += 1;
+            this.times[2] -= 100;
+        }
+        // Minutes are 60 seconds
+        if (this.times[1] >= 60) {
+            this.times[0] += 1;
+            this.times[1] -= 60;
+        }
+    }
+    
+    print() {
+        this.display.innerText = this.format(this.times);
+    }
+    
+    format(times) {
+        return `\
+${pad0(times[0], 2)}:\
+${pad0(times[1], 2)}:\
+${pad0(Math.floor(times[2]), 2)}`;
+    }
+}
+
+function pad0(value, count) {
+    var result = value.toString();
+    for (; result.length < count; --count)
+        result = '0' + result;
+    return result;
+}
+
+function clearChildren(node) {
+    while (node.lastChild)
+        node.removeChild(node.lastChild);
+}
+
+let stopwatch = new Stopwatch(
+    document.querySelector('.stopwatch'),
+    document.querySelector('.results'));
+	</script>
+</div>
+
+
+
+</body>
+</html>
